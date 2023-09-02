@@ -1,3 +1,5 @@
+// Guardamos un arreglo de APIs en una constante para utilizarlos posteriormente
+
 const URL_APIs = ["https://rickandmortyapi.com/api/character"
                 ,"https://rickandmortyapi.com/api/character?page=2"
                 ,"https://rickandmortyapi.com/api/character?page=3"
@@ -7,6 +9,8 @@ const URL_APIs = ["https://rickandmortyapi.com/api/character"
 const container = document.querySelector("#characterContainer");
 
 let arregloPersonajes = [];
+
+// Establecemos la función para mostrar los contenidos de las APIs en el HTML
 
 function showCharacters(array){
     for (const character of array) {
@@ -30,6 +34,8 @@ function showCharacters(array){
         </tr>`
     }
 }
+
+// Declaramos la función para realizar el fetch al grupo de APIs
 
 async function getCharacters(urls){
     for (const url of urls) {
@@ -56,6 +62,8 @@ const gender = document.querySelector("#gender");
 const species = document.querySelector("#species");
 const apply = document.querySelector("#apply");
 const clear = document.querySelector("#clear");
+
+// Establecemos las funciones de filtrar y limpiar la busqueda del usuario según episodio, nombre de personaje, género y especie.
 
 apply.addEventListener("click", function(){
     container.innerHTML = "";
@@ -87,5 +95,3 @@ clear.addEventListener("click", function(){
     species.value = "";
     showCharacters(arregloPersonajes);
 });
-
-// personaje.episode.some((capitulo) => capitulo.includes(episode.value.toString())));
