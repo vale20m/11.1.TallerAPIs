@@ -1,0 +1,16 @@
+body{
+    background: linear-gradient(skyblue, lightyellow);
+}
+
+#titulo{
+    font-size: 300%;
+}
+
+label{
+    font-size: 120%;
+}
+
+#filtro{
+    max-width: fit-content;
+    min-width: fit-content;
+}
