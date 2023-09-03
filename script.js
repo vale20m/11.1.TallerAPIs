@@ -68,7 +68,7 @@ const clear = document.querySelector("#clear");
 apply.addEventListener("click", function(){
     container.innerHTML = "";
     let arregloFiltrado = arregloPersonajes;
-    if (episode.value != ""){
+    if (episode.value != "" && episode.value >= 1 && episode.value <= 51){
         arregloFiltrado = arregloFiltrado.filter((personaje) => { for (const capitulo of personaje.episode) {
                 if(capitulo.includes(episode.value.toString())){
                     return true;
